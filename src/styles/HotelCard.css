@@ -1,0 +1,133 @@
+#HotelCardBody {
+  padding: 50px 5%;
+  background-color: rgb(220, 236, 241);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+#HotelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px;
+  padding: 20px;
+  margin-bottom: 20px; /* Space between cards */
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height for equal sizing */
+  transition: transform 0.2s;
+}
+
+#HotelContainer:hover {
+  transform: translateY(-3px); /* Hover effect */
+}
+
+#LeftHotelBox img {
+  width: 200px;
+  height: 150px; /* Fixed height to maintain uniformity */
+  object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+  border-radius: 10px; /* Round corners */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.873); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#LeftHotelBox img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#MiddleHotelBox {
+  width: 50%; /* Adjust width as needed */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+#MiddleHotelBoxTop {
+  display: flex;
+  flex-direction: column;
+}
+
+#HotelRatingTag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#star {
+  color: gold; /* Color for star icons */
+}
+
+#HotelName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#HotelRatingTag {
+  display:flow-root;
+  align-items: center;
+}
+
+.star-icon {
+  font-size: 4.5rem;
+  color: gold; /* Color for filled stars */
+  margin-right: 4px; /* Space between stars */
+  font-size: 18px; /* Size of the stars */
+  display: inline-block;
+
+}
+
+.empty {
+  color: lightgray; /* Color for empty stars */
+}
+#HotelLocation {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+#RightHotelBox {
+  width: 20%; /* Adjust width as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  text-align: right; /* Align text to the right */
+}
+
+#HotelPrice {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#BreakFastSection {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+  color: green; /* Color for breakfast text */
+}
+
+button {
+  margin-top: 10px; /* Space above the button */
+}
+
+@media (max-width: 768px) {
+  #HotelContainer {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  #LeftHotelBox, #MiddleHotelBox, #RightHotelBox {
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Center text */
+  }
+
+  #HotelPrice {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+}
